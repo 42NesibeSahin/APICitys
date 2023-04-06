@@ -15,7 +15,7 @@ namespace CityInfo_1
                     Id=1,
                     Name="Nesibe",
                     Description="Konya",
-                    PointofInterest=new List<PointofInterestDto>()
+                    PointsOfInterest=new List<PointofInterestDto>()
                     {
                         new PointofInterestDto()
                         {
@@ -37,7 +37,7 @@ namespace CityInfo_1
                     Id=2,
                     Name="Şanlıurfa",
                     Description="Fırat",
-                    PointofInterest=new List<PointofInterestDto>()
+                    PointsOfInterest=new List<PointofInterestDto>()
                     {
                         new PointofInterestDto()
                         {
