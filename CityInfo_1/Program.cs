@@ -1,6 +1,8 @@
 using CityInfo_1;
+using CityInfo_1.DBContexts;
 using CityInfo_1.Services;
 using Microsoft.AspNetCore.StaticFiles;
+using Microsoft.EntityFrameworkCore;
 using Serilog;
 
 Log.Logger = new LoggerConfiguration()
@@ -40,6 +42,12 @@ builder.Services.AddSingleton<FileExtensionContentTypeProvider>();
 #endif
 
 builder.Services.AddSingleton<CitiesDataStore>();
+
+//builder.Services.AddDbContext<CityInfoContext>(DbContextOptions=>DbContextOptions.UseSqlite("Data Source=CityInfo.db"));
+builder.Services.AddDbContext<CityInfoContext>(DbContextOptions => DbContextOptions.UseSqlite(
+    builder.Configuration["ConnectionStrings:CityInfoDBConnectionString"]
+));
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
