@@ -22,9 +22,9 @@ namespace CityInfo_1.Entities
         = new List<PointOfInterest>();
 
 
-        public City(string name)  // == string.Empty 
+        public City(string name) 
         {
-            name = name;
+            Name = name;
 
         }
     }

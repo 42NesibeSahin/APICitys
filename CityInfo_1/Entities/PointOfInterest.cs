@@ -21,10 +21,9 @@ namespace CityInfo_1.Entities
 
         public int CityId { get; set; }
 
-        public PointOfInterest(string name)  // == string.Empty 
+        public PointOfInterest(string name) 
         {
-            name = name;
-
+            Name = name;
         }
     }
 }
